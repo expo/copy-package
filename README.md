@@ -2,7 +2,7 @@
 
 Allows you to download and copy files from a npm package from a temporary installation into your current directory.
 
-```
+```js
 import { copyPackageToTempDir } from 'copy-package';
 
 try {
