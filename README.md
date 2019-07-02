@@ -7,7 +7,12 @@ import { copyPackageToTempDir } from 'copy-package';
 
 (async () => {
   try {
-    let path = await copyPackageToTempDir('expo-template-bare-minimum');
+    let tmp = await copyPackageToTempDir('expo-template-bare-minimum');
+
+    // tmp.name gives you the path, do what you want with it!
+
+    // call this to clean up
+    tmp.removeCallback();
   } catch(e) {
     // uh oh
   }
@@ -15,7 +20,8 @@ import { copyPackageToTempDir } from 'copy-package';
 ```
 
 ```
-$ copy-package expo-template-bare-minimum .
+$ npx copy-package expo-template-bare-minimum
+$ cd expo-template-bare-minimum
 ```
 
 ## Attribution
