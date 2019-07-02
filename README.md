@@ -5,18 +5,16 @@ Allows you to download and copy files from a npm package from a temporary instal
 ```
 import { copyPackageToTempDir } from 'copy-package';
 
-(async () => {
-  try {
-    let tmp = await copyPackageToTempDir('expo-template-bare-minimum');
+try {
+  let tmp = copyPackageToTempDir('expo-template-bare-minimum');
 
-    // tmp.name gives you the path, do what you want with it!
+  // tmp.name gives you the path, do what you want with it!
 
-    // call this to clean up
-    tmp.removeCallback();
-  } catch(e) {
-    // uh oh
-  }
-})();
+  // call this to clean up
+  tmp.removeCallback();
+} catch(e) {
+  // uh oh
+}
 ```
 
 ```
